@@ -1,5 +1,3 @@
-pppppp
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -171,17 +169,18 @@ pppppp
     .card-img { width:80px; height:80px; margin:0 auto 12px; background:#0a0a0a; border-radius:20px; display:flex; align-items:center; justify-content:center; overflow:hidden; box-shadow:0 6px 12px rgba(0,0,0,0.15); border:3px solid #0a0a0a; position:relative; }
     .card-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease; }
     .card:hover .card-img img { transform:scale(1.05); }
-    /* ===== PREMIUM COLOR ICONS (ONLY COLORS) ===== */
+    /* ===== PREMIUM COLOR STATS (LED style) ===== */
     .card-stats {
-      display:flex; flex-wrap:wrap; justify-content:center; gap:12px;
-      background:#fef4e6; padding:10px 10px; border-radius:48px; margin:12px 0 8px;
+      display:flex; flex-wrap:wrap; justify-content:center; gap:8px;
+      background:#fef4e6; padding:10px 6px; border-radius:48px; margin:12px 0 8px;
     }
     .card-stat {
-      display:flex; align-items:center; gap:6px; text-align:center; min-width:55px;
+      display:flex; align-items:center; gap:4px; text-align:center; min-width:50px;
+      padding:0 6px;
     }
     .card-stat .stat-icon {
-      display:inline-flex; align-items:center; justify-content:center; font-size:1.2rem; 
-      width:28px; height:28px; flex-shrink:0; filter:drop-shadow(0 0 6px rgba(0,0,0,0.1));
+      display:inline-flex; align-items:center; justify-content:center; font-size:1.1rem; 
+      width:24px; height:24px; flex-shrink:0; filter:drop-shadow(0 0 6px rgba(0,0,0,0.1));
     }
     /* Rating: Premium Gold */
     .stat-icon.rating { color: #b8860b; filter:drop-shadow(0 0 8px #b8860b); }
@@ -191,8 +190,13 @@ pppppp
     .stat-icon.votes { color: #b71c1c; filter:drop-shadow(0 0 8px #b71c1c); }
     /* Bonus: Premium Emerald Green */
     .stat-icon.bonus { color: #1b5e20; filter:drop-shadow(0 0 8px #1b5e20); }
-    .card-stat-value { font-size:0.95rem; font-weight:800; color:#1e562a; }
-    .card-stat-label { font-size:0.55rem; font-weight:700; color:#6c7a5a; letter-spacing:0.3px; }
+    .card-stat-value {
+      font-size:0.9rem; font-weight:800; 
+      background:linear-gradient(135deg,#1e562a,#2c4c3b); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+    }
+    .card-stat-label {
+      font-size:0.5rem; font-weight:700; color:#6c7a5a; letter-spacing:0.2px;
+    }
     .withdrawal-note { font-size:0.7rem; font-weight:700; color:#146b3a; background:#e0f2e9; display:inline-block; padding:4px 14px; border-radius:40px; margin-top:6px; }
     .download-btn {
       display:block; width:100%; text-align:center; margin-top:16px; padding:12px 0;
@@ -211,7 +215,7 @@ pppppp
     .app-highlight { background:#fff7e8; padding:24px 20px; border-radius:40px; margin:16px 0; text-align:center; }
     .stats-row { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; background:#fef4e6; padding:14px 16px; border-radius:60px; margin:20px auto; max-width:750px; }
     .stat-item { text-align:center; min-width:70px; }
-    .stat-value { font-size:1.3rem; font-weight:800; color:#1e562a; }
+    .stat-value { font-size:1.3rem; font-weight:800; background:linear-gradient(135deg,#1e562a,#2c4c3b); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
     .stat-label { font-size:0.7rem; font-weight:600; color:#6c7a5a; letter-spacing:0.5px; }
     .app-description { background:white; padding:18px 20px; border-radius:32px; text-align:left; margin:20px 0; font-size:0.9rem; line-height:1.45; color:#2d3e2b; box-shadow:0 2px 12px rgba(0,0,0,0.03); }
     .howto-steps { background:#f0f9f0; border-radius:32px; padding:18px 22px; margin:20px 0; text-align:left; }
@@ -224,9 +228,23 @@ pppppp
     .faq-answer { font-size:0.85rem; line-height:1.5; color:#2d3e2b; padding-left:12px; }
     .other-apps-title { font-size:1.4rem; font-weight:800; margin:35px 0 18px; color:#1e293b; border-left:6px solid #2ecc71; padding-left:16px; }
     .other-apps-grid { display:flex; flex-wrap:wrap; gap:18px; justify-content:center; margin-top:12px; background:#ecf9f0; padding:16px 12px; border-radius:40px; }
-    .other-card { background:#fefcf5; border-radius:32px; padding:16px 12px; width:240px; transition:0.2s; border:1px solid #a8d5ba; text-align:center; position:relative; overflow:hidden; }
+    .other-card {
+      background:#fefcf5; border-radius:32px; padding:16px 12px; width:240px; transition:0.2s; border:1px solid #a8d5ba; text-align:center; position:relative; overflow:hidden;
+    }
     .other-card .app-name { font-size:1rem; margin:8px 0 6px; font-weight:800; }
     .other-card .bonus { font-size:0.75rem; padding:4px 12px; background:#fef1cf; border-radius:60px; display:inline-block; }
+    .other-card .mini-stats {
+      display:flex; justify-content:center; gap:10px; margin:8px 0; font-size:0.7rem; flex-wrap:wrap;
+    }
+    .other-card .mini-stats span {
+      display:inline-flex; align-items:center; gap:3px;
+      font-weight:700; 
+    }
+    .mini-stats .ms-rating { color:#b8860b; filter:drop-shadow(0 0 6px #b8860b); }
+    .mini-stats .ms-size { color:#0d47a1; filter:drop-shadow(0 0 6px #0d47a1); }
+    .mini-stats .ms-votes { color:#b71c1c; filter:drop-shadow(0 0 6px #b71c1c); }
+    .mini-stats .ms-bonus { color:#1b5e20; filter:drop-shadow(0 0 6px #1b5e20); }
+    .other-card .withdrawal-note { font-size:0.6rem; padding:2px 10px; }
     .small-download { background:linear-gradient(135deg,#6c5ce7,#fd79a8); font-size:0.8rem; padding:8px 0; margin-top:12px; text-decoration:none; color:white; display:block; width:100%; text-align:center; border-radius:60px; font-weight:700; cursor:pointer; border:none; transition:0.25s ease; box-shadow:0 4px 14px rgba(108,92,231,0.30); }
     .small-download:hover { background:linear-gradient(135deg,#5a4bd1,#e85d8e); transform:scale(0.97); box-shadow:0 6px 18px rgba(108,92,231,0.40); }
     .final-download-btn { background:linear-gradient(135deg,#00b894,#00cec9); padding:14px 20px; font-size:1rem; font-weight:800; border-radius:60px; display:block; width:100%; margin:20px 0 16px 0; box-shadow:0 8px 22px rgba(0,206,201,0.35); text-decoration:none; color:white; transition:0.25s ease; letter-spacing:0.5px; cursor:pointer; text-align:center; border:none; }
@@ -454,7 +472,11 @@ pppppp
       const gridDiv = document.getElementById('allAppsGrid'), downloadContainer = document.getElementById('downloadPageContainer');
       gridDiv.classList.add('hidden'); downloadContainer.classList.remove('hidden');
       const otherApps = appsData.filter((_, idx) => idx !== selectedIndex); let otherAppsHtml = '';
-      otherApps.forEach((app) => { const originalIndex = appsData.findIndex(a => a.name === app.name); otherAppsHtml += `<div class="other-card"><div class="card-img" style="width: 60px; height: 60px; margin-bottom: 8px;"><img src="${app.img}" alt="${app.name}" loading="lazy" decoding="async" width="60" height="60" onerror="this.src='https://via.placeholder.com/60?text=App'"></div><div class="app-name">${app.name}</div><div class="bonus">🎁 ${app.bonus}</div><div class="withdrawal-note" style="font-size:0.7rem;"> ${app.withdrawal}</div><button class="small-download" data-other-index="${originalIndex}">📲 DOWNLOAD</button></div>`; });
+      otherApps.forEach((app) => {
+        const originalIndex = appsData.findIndex(a => a.name === app.name);
+        const s = getCardStats(app.name, app.bonus);
+        otherAppsHtml += `<div class="other-card"><div class="card-img" style="width: 60px; height: 60px; margin-bottom: 8px;"><img src="${app.img}" alt="${app.name}" loading="lazy" decoding="async" width="60" height="60" onerror="this.src='https://via.placeholder.com/60?text=App'"></div><div class="app-name">${app.name}</div><div class="mini-stats"><span class="ms-rating">⭐ ${s.rating}</span><span class="ms-size">⬇ ${s.size}</span><span class="ms-votes">🏆 ${s.votes}</span><span class="ms-bonus">🎁 ${s.bonus}</span></div><div class="withdrawal-note" style="font-size:0.6rem;"> ${app.withdrawal}</div><button class="small-download" data-other-index="${originalIndex}">📲 DOWNLOAD</button></div>`;
+      });
       const appName = selectedApp.name, bonusClean = selectedApp.bonus.replace('₹','');
       let tagPanelHtml = '';
       function bilingualBlock(title, enText, hiText) { return `<div class="tag-block bilingual"><h5>📌 ${title}</h5><div class="en-text">${enText}</div><div class="hi-text">🇮🇳 <strong>हिंदी:</strong> ${hiText}</div></div>`; }
